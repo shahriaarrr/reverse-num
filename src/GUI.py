@@ -31,6 +31,10 @@ class WINDOW():
         self.win.resizable(self.config_resizable[0], self.config_resizable[1])
         self.win.config(bg = self.config_background)
 
+    def reverse(self):
+        a = self.number_in.get()
+        main(a)
+
     def Load_objects(self):
         Label(
             self.win,
@@ -46,5 +50,14 @@ class WINDOW():
             background = self.config_background,
             font = ('Arial', 10, 'bold') ,
         ).pack()
+
+        number_in = Entry(
+            self.win,
+            background = '#FFFFFF',
+            foreground = 'black',
+            width = 34,
+        )
+        self.number_in = number_in
+        number_in.pack()
 
 app = WINDOW()
