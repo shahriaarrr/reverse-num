@@ -16,7 +16,7 @@ class WINDOW():
         self.config_width = 250
         self.confing_heigt = 250
         self.config_resizable = [False, False]
-        self.config_background = '#F36A05'
+        self.config_background = '#00FC39'
 
         self.Load_Configs()
 
