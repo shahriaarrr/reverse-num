@@ -19,6 +19,7 @@ class WINDOW():
         self.config_background = '#00FC39'
 
         self.Load_Configs()
+        self.Load_objects()
 
 
 
@@ -29,5 +30,21 @@ class WINDOW():
         self.win.geometry(str(self.config_width) + 'x' + str(self.confing_heigt))
         self.win.resizable(self.config_resizable[0], self.config_resizable[1])
         self.win.config(bg = self.config_background)
+
+    def Load_objects(self):
+        Label(
+            self.win,
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 10)
+        ).pack()
+
+        Label(
+            self.win,
+            text = "your number: ",
+            foreground = 'black',
+            background = self.config_background,
+            font = ('Arial', 10, 'bold') ,
+        ).pack()
 
 app = WINDOW()
