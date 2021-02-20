@@ -60,4 +60,52 @@ class WINDOW():
         self.number_in = number_in
         number_in.pack()
 
+        Label(
+            self.win,
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 5)
+        ).pack()
+
+        reverse_button = Button(
+            self.win,
+            text = 'reverse',
+            background = '#FC7E00',
+            foreground = 'black',
+            border = 5,
+        )
+        reverse_button.config(command = self.reverse)
+        reverse_button.pack()
+
+        Label(
+            self.win,
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 30)
+        ).pack()
+
+        Label(
+            self.win,
+            text = "reverse: ",
+            foreground = 'black',
+            background = self.config_background,
+            font = ('Arial', 10, 'bold') ,
+        ).pack()
+
+        Label(
+            self.win,
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 5)
+        ).pack()
+
+        number_in = Entry(
+            self.win,
+            background = '#FFFFFF',
+            foreground = 'black',
+            width = 34,
+        )
+        self.number_in = number_in
+        number_in.pack()
+
 app = WINDOW()
