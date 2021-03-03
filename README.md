@@ -1,8 +1,11 @@
 # reverse-num
 reverse number with python
 
-1. open terminal on location of file (reverse-num.py)
-2. run python3 reverse-num.py
+Graphic version programmer: [shahriar ghasempour](https://github.com/shahriaarrr)
+
+1. You are only allowed to enter integers.
+2. open terminal in ```src``` folder's location.
+3. run ```python3 reverse-num.py``` for cmd version and ```python3 Graphical.py ``` for graphical version.
 
 example:
 input: 123456
