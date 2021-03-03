@@ -7,8 +7,12 @@ Graphic version programmer: [shahriar ghasempour](https://github.com/shahriaarrr
 2. open terminal in ```src``` folder's location.
 3. run ```python3 reverse-num.py``` for cmd version and ```python3 Graphical.py ``` for graphical version.
 
-example:
-input: 
+
+example input: 
+
 ```123456```
-output: 
+
+
+example output: 
+
 ```654321```
