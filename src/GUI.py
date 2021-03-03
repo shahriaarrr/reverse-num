@@ -1,7 +1,7 @@
 from tkinter import *
 
 def main(n, lbl):
-    x = n
+    x = int(n)
     y = 0
     while(x > 0):
         y = y * 10 + (x % 10)
@@ -33,7 +33,7 @@ class WINDOW():
 
     def reverse(self):
         a = self.number_in.get()
-        main(a)
+        main(a, self.show_lbl)
 
     def Load_objects(self):
         Label(
@@ -45,11 +45,13 @@ class WINDOW():
 
         Label(
             self.win,
-            text = "your number: ",
+            text = "Enter your number: ",
             foreground = 'black',
             background = self.config_background,
             font = ('Arial', 10, 'bold') ,
         ).pack()
+
+        
 
         number_in = Entry(
             self.win,
@@ -59,6 +61,14 @@ class WINDOW():
         )
         self.number_in = number_in
         number_in.pack()
+        
+        show_lbl = Label(
+            self.win,
+            background = self.config_background,
+            foreground = 'black',
+        )
+        self.show_lbl = show_lbl
+        show_lbl.pack()
 
         Label(
             self.win,
@@ -81,31 +91,17 @@ class WINDOW():
             self.win,
             text = '  ',
             background = self.config_background,
-            font = ('Arial', 30)
+            font = ('Arial', 50)
         ).pack()
 
-        Label(
+
+        copy = Label(
             self.win,
-            text = "reverse: ",
-            foreground = 'black',
+            text = 'Copyright (c) 2021 Ali Fakoor',
             background = self.config_background,
-            font = ('Arial', 10, 'bold') ,
-        ).pack()
-
-        Label(
-            self.win,
-            text = '  ',
-            background = self.config_background,
-            font = ('Arial', 5)
-        ).pack()
-
-        number_in = Entry(
-            self.win,
-            background = '#FFFFFF',
             foreground = 'black',
-            width = 34,
+            font = ('Arial', 7),
         )
-        self.number_in = number_in
-        number_in.pack()
+        copy.pack()
 
 app = WINDOW()
